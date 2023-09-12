@@ -51,7 +51,7 @@ class _MyAppState extends State<MyApp> {
               Row(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(left: 200,right: 100),
+                    padding: const EdgeInsets.only(top: 50,left: 150),
                     child: Image(
                         image: AssetImage(
                             "assets/icons/Iconarchive-Incognito-Animal-2-Dino-Tyrannosaurus.512.png"),
