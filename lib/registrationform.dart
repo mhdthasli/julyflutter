@@ -136,7 +136,7 @@ class RegistrationState extends State<Registrationform>{
                       borderRadius: BorderRadius.circular(40))),
           ),
             ),
-          SizedBox(height: 20),
+          SizedBox(height: 10),
        ElevatedButton(onPressed: (){}, child: Text(
          "REGISTRATION",
          style: TextStyle(
