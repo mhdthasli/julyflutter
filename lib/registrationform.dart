@@ -2,6 +2,7 @@ import 'dart:html';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:julyflutter/loginpage.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -23,7 +24,9 @@ class RegistrationState extends State<Registrationform> {
       appBar: AppBar(
         title: Text("RegistrationForm"),
       ),
-      body: Container(
+      body: Container(decoration: BoxDecoration(image: DecorationImage(
+        image: NetworkImage("https://images.unsplash.com/photo-1516617442634-75371039cb3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmFja2dyb3VuZCUyMGltYWdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60"),fit: BoxFit.fill
+      )),
         child: Column(
           children: [
             SizedBox(height: 3),
@@ -32,69 +35,69 @@ class RegistrationState extends State<Registrationform> {
               style: TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
-                  color: Colors.black87),
+                  color: Colors.white),
             ),
             SizedBox(height: 3,),
-            TextButton(onPressed: (){}, child: Text("Please Fill In This Form To Create An Account!")),
+            TextButton(onPressed: (){}, child: Text("Please Fill In This Form ")),
             SizedBox(height: 5),
             Padding(
-              padding: const EdgeInsets.only(right: 30, left: 30),
+              padding: const EdgeInsets.only(right: 100, left: 100),
               child: TextField(
                 decoration: InputDecoration(
                   labelText: "FrstName",
                   hintText: "FistName",
                   prefixIcon: Icon(Icons.person),
                   border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(40),
+                    borderRadius: BorderRadius.circular(20),
                   ),
                 ),
               ),
             ),
-            SizedBox(height: 10),
+            SizedBox(height: 15),
             Padding(
-              padding: const EdgeInsets.only(right: 30, left: 30),
+              padding: const EdgeInsets.only(right: 400, left: 400),
               child: TextField(
                 decoration: InputDecoration(
                   labelText: "LastName",
                   hintText: "LastName",
                   prefixIcon: Icon(Icons.person),
                   border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(40),
+                    borderRadius: BorderRadius.circular(20),
                   ),
                 ),
               ),
             ),
-            SizedBox(height: 10),
+            SizedBox(height: 15),
             Padding(
-              padding: const EdgeInsets.only(right: 30, left: 30),
+              padding: const EdgeInsets.only(right: 100, left: 100),
               child: TextField(
                 decoration: InputDecoration(
                   labelText: "UserName",
                   hintText: "UserName",
                   prefixIcon: Icon(Icons.login),
                   border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(40),
+                    borderRadius: BorderRadius.circular(20),
                   ),
                 ),
               ),
             ),
-            SizedBox(height: 10),
+            SizedBox(height: 15),
             Padding(
-              padding: const EdgeInsets.only(right: 30, left: 30),
+              padding: const EdgeInsets.only(right: 100, left: 100),
               child: TextField(
                 decoration: InputDecoration(
                   labelText: "E-mail",
                   hintText: "E-mail",
                   prefixIcon: Icon(Icons.email),
                   border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(40),
+                    borderRadius: BorderRadius.circular(20),
                   ),
                 ),
               ),
             ),
-            SizedBox(height: 10),
+            SizedBox(height: 15),
             Padding(
-              padding: const EdgeInsets.only(right: 30, left: 30),
+              padding: const EdgeInsets.only(right: 100, left: 100),
               child: TextField(
                 obscureText: showpass,
                 obscuringCharacter: "*",
@@ -120,9 +123,9 @@ class RegistrationState extends State<Registrationform> {
                         borderRadius: BorderRadius.circular(40))),
               ),
             ),
-            SizedBox(height:10),
+            SizedBox(height:15),
             Padding(
-              padding: const EdgeInsets.only(right: 30, left: 30),
+              padding: const EdgeInsets.only(right: 100, left: 100),
               child: TextField(
                 obscureText: showpass,
                 obscuringCharacter: "*",
@@ -145,11 +148,11 @@ class RegistrationState extends State<Registrationform> {
                           : Icons.visibility),
                     ),
                     border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(40))),
+                        borderRadius: BorderRadius.circular(20))),
               ),
             ),
-            SizedBox(height:6),
-            ElevatedButton(
+            SizedBox(height:15),
+            ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.white),
               onPressed: () {},
               child: Text(
                 "REGISTRATION",
@@ -161,7 +164,7 @@ class RegistrationState extends State<Registrationform> {
               ),
             ),
             SizedBox(height: 1),
-            TextButton(onPressed: (){}, child: Text("Aleady have an account? Login here")),
+            TextButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder:(Context)=>loginpage()));}, child: Text("Aleady have an account")),
 
           ],
         ),
