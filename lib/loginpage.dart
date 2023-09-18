@@ -85,7 +85,7 @@ class loginstate extends State<loginpage> {
               ),
               SizedBox(height: 30),
               TextButton(onPressed: (){}, child:Text("SignUp")),
-              SizedBox(height: 0,),
+              SizedBox(height: 0),
               TextButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (Context)=> Registrationform()));}, child: Text("Not a User?  Create a Account")),
             ],
           ),

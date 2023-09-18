@@ -83,7 +83,7 @@ class _MyAppState extends State<MyApp> {
               ),),
 
               Row(
-                children: [
+                children:[
                   Padding(
                     padding: const EdgeInsets.only( top:50,right: 50,left: 50),
                     child: Image(
