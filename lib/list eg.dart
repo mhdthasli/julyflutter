@@ -11,51 +11,36 @@ void main() {
     return MaterialApp(
       useInheritedMediaQuery: true,
       debugShowCheckedModeBanner: false,
-      home: Listview_Assignment(),
+      home: List_eg(),
     );
   }));
 }
 
-class Listview_Assignment extends StatefulWidget {
+class List_eg extends StatefulWidget {
   @override
-  State<Listview_Assignment> createState() => _Listview_AssignmentState();
+  State<List_eg> createState() => List_egState();
 }
 
-class _Listview_AssignmentState extends State<Listview_Assignment> {
+class List_egState extends State<List_eg> {
   @override
   var step = [
     "Step 1",
     "Step 2",
     "Step 3",
     "Step 4",
-    "Step 5",
-    "Step 6",
-    "Step 7",
-    "Step 8",
-    "Step 9",
-    "Step 10",
-    "Step 11",
-  ];
-  var Due = [
-    "Step 01 - Due in 1 Day",
-    "Step 02 - Due in 2 Day",
-    "Step 03 - Due in 3 Day",
-    "Step 04 - Due in 4 Day",
-    "Step 05 - Due in 5 Day",
-    "Step 06 - Due in 6 Day",
-    "Step 07 - Due in 7 Day",
-    "Step 08 - Due in 8 Day",
-    "Step 09 - Due in 9 Day",
-    "Step 10 - Due in 10 Day",
-    "Step 11 - Due in 11 Day",
-  ];
+    "Step 5"];
+  var Due = ["Step 01 - Due in 1 Day", "Step 02 - Due in 2 Day", "Step 03 - Due in 3 Day", "Step 04 - Due in 4 Day", "Step 05 - Due in 5 Day"];
 
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.teal,
-        title: Center(child: Text("LIST VIEW")),
+        backgroundColor: Colors.indigo,
+        title: Center(child: Text("LIST VIEW",style: TextStyle(fontStyle: FontStyle.italic,fontWeight: FontWeight.bold,),)),
+
+
+
       ),
+
       body: ListView.separated(
         itemBuilder: (context, index) {
           return ListTile(
