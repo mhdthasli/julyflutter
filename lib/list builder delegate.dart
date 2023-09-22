@@ -39,7 +39,7 @@ class Listviewcustom extends StatelessWidget {
               child: ListTile(
                 title: Text(name[index]),
                 subtitle: Text(phone[index]),
-                leading: Image(image: AssetImage(image[index])),
+                leading:CircleAvatar(backgroundImage: AssetImage(image[index]),),
               ),
             );
           },
