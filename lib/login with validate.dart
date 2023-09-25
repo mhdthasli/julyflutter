@@ -85,11 +85,8 @@ class Login_validate_state extends State<Login_Validate> {
                     ),
                   ),
                   validator: (password) {
-                    if (password!.isEmpty ||
-                        password!.contains('@') | password.contains('.')) {
+                    if (password!.isEmpty || password.length<5){
                       return 'Enter valid number';
-
-
                     }
                     else{
                       return null;

@@ -1,12 +1,17 @@
 import 'dart:html';
 
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:julyflutter/loginpage.dart';
 
 void main() {
-  runApp(MaterialApp(
-    home: Registrationform(),
+  runApp(DevicePreview(
+    builder: (context) {
+      return MaterialApp(useInheritedMediaQuery: true,debugShowCheckedModeBanner: false,
+        home: Registrationform(),
+      );
+    }
   ));
 }
 
